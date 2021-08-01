@@ -1,21 +1,113 @@
 doctype html
 html(lang="en")
   head
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(charset="UTF-8")
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content="The Students Placement Cell, NISER, established in 2021, with an aim to provide access to opportunities to all graduating students of NISER Bhubaneswar, works to network and connect the students with open positions in academia, industry, and research programs, which will further their career development.")
+    meta(name='author' content='Abhishek Anil Deshmukh')
     block title
-      title gulp4-html-scss-ts-template🐶
-    meta(name="description", content="")
-    meta(name="author", content="")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="/css/style.css")
-    //- [if lt IE 9]
-    //- script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
-    //- script(src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js")
-    //- [endif]
-    link(rel="shortcut icon" href="")
-    block headVendor
-    script(src="/js/main.js")
+    // Favicon
+    link(rel='apple-touch-icon' sizes='180x180' href='./static/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='./static/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='./static/favicon/favicon-16x16.png')
+    link(rel='manifest' href='./static/favicon/site.webmanifest')
+    link(rel='mask-icon' href='./static/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    meta(name='msapplication-TileColor' content='#da532c')
+    meta(name='theme-color' content='#ffffff')
+    // Fonts
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet')
+    // Icons
+    link(href='./static/vendor/nucleo/css/nucleo.css' rel='stylesheet')
+    link(href='./static/vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet')
+    // Argon CSS
+    link(type='text/css' href='./static/css/argon.min.css' rel='stylesheet')
+    // Custom CSS
+    link(type='text/css' href='./static/css/custom.css' rel='stylesheet')
     block head
   body
+    header.header-global
+      nav#navbar-main.navbar.navbar-main.navbar-expand-lg.navbar-transparent.navbar-light.headroom
+        .container
+          a.navbar-brand(href='./index.html')
+            img(src='./static/img/white_logo.png' alt='NISER logo')
+            |             NISER
+          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar_global' aria-controls='navbar_global' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbar_global.navbar-collapse.collapse
+            .navbar-collapse-header
+              .row
+                .col-10.collapse-brand
+                  a(href='./index.html')
+                    img(src='./static/img/blue_logo.jpg')
+                    span.pl-3 NISER
+                .col-2.collapse-close
+                  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar_global' aria-controls='navbar_global' aria-expanded='false' aria-label='Toggle navigation')
+                    span
+                    span
+            ul.navbar-nav.navbar-nav-hover.align-items-lg-center
+              // Students
+              li.nav-item.dropdown
+                a.nav-link(href='#' data-toggle='dropdown' role='button')
+                  i.ni.ni-single-02.d-lg-none
+                  span.nav-link-inner--text Students
+                .dropdown-menu.dropdown-menu-xl
+                  .dropdown-menu-inner
+                    a.media.d-flex.align-items-center(href='./courses.html')
+                      .icon.icon-shape.bg-gradient-primary.rounded-circle.text-white
+                        i.ni.ni-atom
+                      .media-body.ml-3
+                        h6.heading.text-primary.mb-md-1 Courses
+                        p.description.d-none.d-md-inline-block.mb-0 Courses and research opportunities provided in NISER by different schools.
+                    a.media.d-flex.align-items-center(href='./events.html')
+                      .icon.icon-shape.bg-gradient-warning.rounded-circle.text-white
+                        i.ni.ni-tie-bow
+                      .media-body.ml-3
+                        h5.heading.text-warning.mb-md-1 Events
+                        p.description.d-none.d-md-inline-block.mb-0 A list of few of the hilight events held and organised by and in NISER.
+              // Achievements
+              li.nav-item.dropdown
+                a.nav-link(href='./achievements.html' data-toggle='dropdown' role='button')
+                  i.ni.ni-spaceship.d-lg-none
+                  span.nav-link-inner--text Achievements
+                .dropdown-menu
+                  a.dropdown-item(href='./achievements.html#alumni-and-their-achievements') Alumni achievements
+                  a.dropdown-item(href='./achievements.html#niser-achievements') NISER achievements
+              // Meet the team
+              li.nav-item
+                a.nav-link(href='./meet-the-team.html')
+                  i.ni.ni-spaceship.d-lg-none
+                  span.nav-link-inner--text Meet the team
+            // Social links on navbar
+            ul.navbar-nav.align-items-lg-center.ml-lg-auto
+              li.nav-item
+                a.nav-link.nav-link-icon(href='https://www.linkedin.com/company/placement-cell-niser/' target='_blank' data-toggle='tooltip' title='Follow us on Linked in')
+                  i.fa.fa-linkedin-square
+                  span.nav-link-inner--text.d-lg-none Linkedin
     block body
+
+    footer.footer.has-cards
+      .container
+        .row.row-grid.align-items-center.my-md
+          .col-lg-6
+            h3.text-primary.font-weight-light.mb-2
+              img(src='./static/img/blue_logo.jpg' style='height:28px;')
+              |               NISER
+            p.mb-0.font-weight-light An Autonomous Institute under DAE, Government of India
+          .col-lg-6.text-lg-center.btn-wrapper
+            a.btn.btn-neutral.btn-icon-only.btn-linkedin.btn-round.btn-lg(target='_blank' href='https://www.linkedin.com/company/placement-cell-niser/' data-toggle='tooltip' data-original-title='Like us')
+              i.fa.fa-linkedin-square
+        hr
+        .row.align-items-center.justify-content-md-between
+          .copyright
+            | &copy; 2021 National Institute of Science Education and Research
+    // Core
+    script(src='./static/vendor/jquery/jquery.min.js')
+    script(src='./static/vendor/popper/popper.min.js')
+    script(src='./static/vendor/bootstrap/bootstrap.min.js')
+    script(src='./static/vendor/headroom/headroom.min.js')
+    // Optional JS
+    script(src='./static/vendor/onscreen/onscreen.min.js')
+    script(src='./static/vendor/nouislider/js/nouislider.min.js')
+    script(src='./static/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js')
+    // Argon JS
+    script(src='./static/js/argon.js?v=1.0.1')
