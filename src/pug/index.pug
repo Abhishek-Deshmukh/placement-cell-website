@@ -10,8 +10,8 @@ block append body
     // Hero banner
     .position-relative
       section.section.section-lg.section-hero.section-shaped
-        .shape.shape-style-1.shape-primary
-          span.span-150
+        .shape.shape-style-1.bg-hero(style='background-image: url("./static/img/hero.jpeg");background-repeat: no-repeat;background-attachment: fixed;background-size: cover;')
+          span.span-15
           span.span-50
           span.span-50
           span.span-75
@@ -24,7 +24,7 @@ block append body
         .container.shape-container.d-flex.align-items-center.py-lg
           .col.px-0
             .row.align-items-center.justify-content-center
-              .col-lg-8.text-center
+              .col-lg-8.text-center(style="background: #000000af;border-radius: 10px;padding-top: 90px;padding-bottom: 90px;")
                 img.img-fluid(src='./static/img/white_logo.png' style='width: 250px' alt='NISER')
                 h3.text-white.mt-3
                   | National Institute of Science Education and Research
@@ -34,6 +34,8 @@ block append body
           svg(x='0' y='0' viewbox='0 0 2560 100' preserveaspectratio='none' version='1.1' xmlns='http://www.w3.org/2000/svg')
             polygon.fill-white(points='2560 0 2560 100 0 100')
 
+    // Director's Message
+    include include/_directors_message
     // About NISER
     include include/_about
     // Selection procedure and Scholarship
